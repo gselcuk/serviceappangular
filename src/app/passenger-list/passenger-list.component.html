@@ -1,0 +1,26 @@
+<div *ngIf = "routeInfo != ''">
+    <p>All passenger that using {{routeInfo}} shuttle can be found below.</p>
+    <tr *ngFor="let p of passengers">
+        <th scope="row" >{{p}}</th>
+        <td>
+          <button type="button" class="btn btn-sm btn-outline-danger" (click)="onRemove(p)"  style="margin:4px">Delete</button>
+       </td>
+    </tr>
+    <table class="table table-striped container" style="margin:15px">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+                <th><input type="text" #passengerName id="passengerName" (keyup.Enter)="save()"  style="margin:4px"></th>
+                <th><input type="text" #passengerLastName id="passengerLastName" (keyup.Enter)="save()"  style="margin:4px"></th>
+                <td><button type="button" class="btn btn-primary mb-2" (click)="add(passengerName.value,passengerLastName.value)"  style="margin:4px">Add Passenger</button></td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+

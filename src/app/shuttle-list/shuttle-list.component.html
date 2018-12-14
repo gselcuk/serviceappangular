@@ -1,0 +1,39 @@
+<div style = "vertical-align: middle;height: 100%;text-align: center;  width:100%; display: inline-block;">
+    <div class = "jumbotron" style="background-color:white">
+        <div class="form-group d-flex container text-center">
+            <input type="text" class="form-control" placeholder="Filter shuttles" [formControl] = "term">
+            <a role="button" href="" class="btn btn-primary ml-3" routerLink="../create">New Shuttle</a>
+        </div>
+
+        <table class="table table-striped container">
+            <thead>
+            <tr>
+              <th>Driver Name</th>
+              <th>PlateNumber</th>
+              <th>Route Info</th>
+              <th>Tel Number of Driver</th>
+              <th>Passenger Info</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let s of shuttles">
+              <td>{{s.driverName}}</td>
+              <td>{{s.plateNumber}}</td>
+              <td>{{s.routeInfo}}</td>
+              <td>{{s.telNumberOfDriver}}</td>
+              <td>
+                 <button type="button" class="btn btn-sm" [routerLink]="['../passengers', s.id]" style="margin:4px">See Passengers</button>
+              </td>
+              <td>
+                <a role="button" href="" class="btn btn-sm btn-outline-success" [routerLink]="['../edit', s.id]" style="margin:4px">Edit</a>
+
+                <button type="button" class="btn btn-sm btn-outline-danger" (click)="onRemove(s)">Delete</button>
+              </td>
+
+            </tr>
+            </tbody>
+          </table>
+
+          <!-- <ngb-pagination class="d-flex justify-content-center"></ngb-pagination> -->
+    </div>
+</div>

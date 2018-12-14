@@ -1,0 +1,46 @@
+
+
+<form [formGroup]="form" autocomplete="off">
+  <div class="form-group">
+    <label for="driverName">Driver Name</label>
+    <input type="text" class="form-control" id="driverName"
+           [class.is-invalid]="form.get('driverName').invalid && form.get('routeInfo').touched"
+           formControlName="driverName"
+           (keyup.Enter)="save()">
+  <div class="invalid-feedback">Driver Name is Required</div>
+  </div>
+
+  <div class="form-group">
+      <label for="routeInfo">Route Info</label>
+      <input type="text" class="form-control" id="routeInfo"
+             [class.is-invalid]="form.get('routeInfo').invalid && form.get('routeInfo').touched"
+             formControlName="routeInfo"
+             (keyup.Enter)="save()">
+    <div class="invalid-feedback">Route Info is Required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="telNumberOfDriver">Telephone Number</label>
+        <input type="text" class="form-control" id="telNumberOfDriver"
+        [class.is-invalid]="form.get('telNumberOfDriver').invalid && form.get('telNumberOfDriver').touched"
+               formControlName="telNumberOfDriver"
+               (keyup.Enter)="save()">
+      </div>
+      <div class="invalid-feedback">Telephone Numbers is Required</div>
+
+    <div class="form-group">
+        <label for="plateNumber">Plate Number</label>
+        <input type="text" class="form-control" id="plateNumber"
+               [class.is-invalid]="form.get('plateNumber').invalid && form.get('routeInfo').touched"
+               formControlName="plateNumber"
+               (keyup.Enter)="save()">
+      <div class="invalid-feedback">Plate Number is Required</div>
+      </div>
+
+
+</form>
+
+<button type="button" class="btn btn-primary" (click)="save()" [disabled]="form.invalid">Save</button>
+<button type="button" class="btn btn-secondary" (click)="clear()"  style="margin:4px">Clear</button>
+<button type="button" class="btn btn-secondary" (click)="goBack()"  style="margin:4px">Cancel</button>
+<button type="button" class="btn btn-sm" [routerLink]="['/passengers', id]" [disabled]="!id"  style="margin:4px">See Passengers</button>

@@ -1,0 +1,43 @@
+{
+  "shuttles": [
+    {
+      "id": "2",
+      "driverName": "Selcuksda",
+      "plateNumber": "155sAB345",
+      "routeInfo": "Bakırköy",
+      "telNumberOfDriver": "053512345678",
+      "passengers": [
+        "Test undefined",
+        "Test hsjadsa"
+      ]
+    },
+    {
+      "id": "1",
+      "driverName": "Goktug",
+      "routeInfo": "Kadıköy",
+      "plateNumber": "155sAB545",
+      "passengers": [
+        "Test",
+        "Test Three"
+      ],
+      "telNumberOfDriver": "05351241218"
+    },
+    {
+      "id": "9UdOgih",
+      "driverName": "Ahmet",
+      "plateNumber": "12AS454",
+      "routeInfo": "Yeşilköy",
+      "telNumberOfDriver": "4565412123",
+      "passengers": [
+        "test"
+      ]
+    },
+    {
+      "id": "55nsvcn",
+      "driverName": "Test",
+      "plateNumber": "te12st",
+      "routeInfo": "Test",
+      "telNumberOfDriver": "12345641312"
+    }
+  ]
+}
